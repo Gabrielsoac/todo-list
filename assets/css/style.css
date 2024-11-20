@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+:root {
+    --primary-color: rgb(0, 0, 0);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    background-image: linear-gradient(to top, #6610f2, #4223b8, #2a227d, #1d1a44, #0e0e0e);
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 640px;
+    font-family: Doto, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px 5px #10061f;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.input-task {
+    width: 100%;
+    max-width: 400px;
+    height: 40px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+}
+
+.title {
+    padding: 20px;
+    font-size: 4vh;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.tasks {
+    font-size: 25px;
+    margin-left: 100px;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    overflow-y: auto;
+    margin-bottom: 1px;
+}
+
+.delete {
+    width: auto;
+    padding: 10px 10px;
+    color: whitesmoke;
+    background-color: #797dde;
+    border: none;
+    border-radius: 10px;
+}
+
+.delete:hover, .button-add-task:hover {
+    cursor: pointer;
+}
+
+.input-task-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button-add-task {
+    width: 100%;
+    max-width: 400px;
+    height: 30px;
+    margin: 10px 0;
+    color: whitesmoke;
+    background-color: #797dde;
+    border: none;
+    border-radius: 10px;
+}
+
+.label-input-task {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.tasks-field {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 2vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+}
+
+.error-box {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgb(255, 0, 0, 0.6);
+    padding: 1%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 3vh;
+    }
+
+    .input-task {
+        height: 35px;
+    }
+
+    .button-add-task {
+        height: 35px;
+    }
+
+    .tasks {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5vh;
+    }
+
+    .input-task, .button-add-task {
+        width: 90%;
+        height: 30px;
+    }
+
+    .delete {
+        width: 90%;
+    }
+}
